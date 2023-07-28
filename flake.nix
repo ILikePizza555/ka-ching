@@ -26,6 +26,7 @@
             {
                 devshells.default = {
                     packages = [
+                        pkgs.sqlite
                         pkgs.ruff
                         (mkPoetryEnv {
                             projectDir = ./.;
