@@ -49,6 +49,10 @@
                         (mkPoetryEnv {
                             projectDir = ./.;
                             overrides = poetry2nix.overrides.withDefaults (final: prev: {
+                                apsw = prev.apsw.overridePythonAttrs (old: {
+                                    buildInputs = (old.buildInputs or []) ++ [pkgs.sqlite];
+                                });
+                                # types-peewee uses wheel
                                 types-peewee = prev.types-peewee.override {
                                     preferWheel = true;
                                 };
