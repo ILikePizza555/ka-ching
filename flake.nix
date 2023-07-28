@@ -48,6 +48,11 @@
                         pkgs.ruff
                         (mkPoetryEnv {
                             projectDir = ./.;
+                            overrides = poetry2nix.overrides.withDefaults (final: prev: {
+                                types-peewee = prev.types-peewee.override {
+                                    preferWheel = true;
+                                };
+                            });
                         })
                     ];
                 };
