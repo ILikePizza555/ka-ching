@@ -49,8 +49,10 @@
                         (mkPoetryEnv {
                             projectDir = ./.;
                             overrides = poetry2nix.overrides.withDefaults (final: prev: {
-                                apsw = prev.apsw.overridePythonAttrs (old: {
-                                    buildInputs = (old.buildInputs or []) ++ [pkgs.sqlite];
+                                # poetry2nix doesn't run apsw's setuptools correctly, so it tries to fetch
+                                # sqlite from the internet. So I'm using apsw from nixpkgs and overriding the src.
+                                apsw = pkgs.python310Packages.apsw.overrideAttrs (_: {
+                                    src = prev.apsw.src;
                                 });
                                 # types-peewee uses wheel
                                 types-peewee = prev.types-peewee.override {
