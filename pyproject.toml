@@ -15,6 +15,13 @@ peewee = "^3.16.2"
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.4.1"
 pytest = "^7.4.0"
+types-peewee = "^3.16.0.1"
+
+[tool.ruff]
+select = ["C90", "E", "F", "B", "Q", "I", "N"]
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = "double"
 
 [build-system]
 requires = ["poetry-core"]
