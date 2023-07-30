@@ -11,6 +11,7 @@ packages = [{include = "ka_ching"}]
 python = "^3.10"
 apsw = "^3.42.0.1"
 peewee = "^3.16.2"
+polars = "^0.18.9"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.4.1"
