@@ -22,7 +22,7 @@
                 "x86_64-linux"
                 "aarch64-darwin"
             ];
-            perSystem = { system, pkgs, inputs', ... }:
+            perSystem = { system, pkgs, lib, inputs', ... }:
             let
                 poetry2nix = inputs'.poetry2nix.legacyPackages;
                 inherit (poetry2nix) mkPoetryEnv;
@@ -67,10 +67,14 @@
                                 let
                                     sha256 = "sha256-MW6ZeFLZ9aYzeee8OKKbXjpLauOW5yVJ1fvFU/6N9vw=";
                                     # Use nightly rust, because polars uses nightly rust features
-                                    toolchain = inputs'.fenix.packages.minimal.toolchain;
+                                    toolchain = inputs'.fenix.packages.toolchainOf {
+                                        channel = "nightly";
+                                        date = "2023-07-27";
+                                        sha256 = "sha256-1bUA3mqH455LncZMMH1oEBFLWu5TOluJeDZ8iwAsBGs=";
+                                    };
                                     rustPlatform = pkgs.makeRustPlatform {
-                                        cargo = toolchain;
-                                        rustc = toolchain;
+                                        cargo = toolchain.cargo;
+                                        rustc = toolchain.rustc;
                                     };
                                 in
                                 prev.polars.overridePythonAttrs (old: rec {
@@ -89,7 +93,7 @@
                                         };
                                     };
                                     cargoRoot = "py-polars";
-                                    buildAndTestSubdir = "py-polars";
+                                    maturinBuildFlags = "-m ${cargoRoot}/Cargo.toml -o ./target/wheels";
                                     nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [
                                         rustPlatform.cargoSetupHook
                                         rustPlatform.maturinBuildHook
