@@ -1,0 +1,11 @@
+Transaction ID,Date,Type,From,To,Amount,Currency,Description
+123456,2023-07-01,"Withdrawal","Checking Account","ATM", -50.00,"USD","ATM Cash"
+123457,2023-07-02,"Deposit","Employer","Checking Account", 2100.00,"USD","Salary"
+123458,2023-07-03,"Transfer","Checking Account","Savings Account", -200.00,"USD","Monthly Savings"
+123459,2023-07-04,"Payment","Checking Account","Utility Company", -70.00,"USD","Electric Bill"
+123460,2023-07-05,"Payment","Checking Account","Landlord", -1000.00,"USD","Rent"
+123461,2023-07-06,"Withdrawal","Checking Account","ATM", -50.00,"USD","ATM Cash"
+123462,2023-07-07,"Payment","Checking Account","Internet Provider", -45.00,"USD","Internet Bill"
+123463,2023-07-08,"Withdrawal","Checking Account","ATM", -30.00,"USD","ATM Cash"
+123464,2023-07-09,"Payment","Checking Account","Gym", -30.00,"USD","Gym Fees"
+123465,2023-07-10,"Purchase","Checking Account","Online Store", -120.00,"USD","Online Shopping"

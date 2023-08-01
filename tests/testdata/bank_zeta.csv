@@ -1,0 +1,11 @@
+Date,Payee,Category,Memo,Debit,Credit
+2023-07-01,"Grocery Store","Groceries","Weekly shopping",85.15,
+2023-07-02,"Employer","Salary","Paycheck",,2200.00
+2023-07-03,"Local Gym","Gym Membership","Monthly fee",40.00,
+2023-07-04,"Local Pharmacy","Health","Medications",20.00,
+2023-07-05,"Utility Company","Bills","Water bill",50.00,
+2023-07-06,"Landlord","Rent","Monthly rent",1200.00,
+2023-07-07,"Telecom Company","Bills","Cellphone bill",60.00,
+2023-07-08,"Self","Transfers","Transfer to savings",300.00,
+2023-07-09,"Gas Station","Auto & Transport","Car fuel",35.00,
+2023-07-10,"Friend","Income","Received owed money",,100.00

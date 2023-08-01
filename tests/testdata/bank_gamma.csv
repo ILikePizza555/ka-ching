@@ -1,0 +1,8 @@
+Date, Transaction Type, Sort Code, Account Number, Transaction Description, Debit Amount, Credit Amount, Balance
+2023-07-01, "ATM", "30-90-89", "12345678", "ATM Withdrawal", 100.00, , 1900.00
+2023-07-02, "CHAPS", "30-90-89", "12345678", "Salary", , 2000.00, 3900.00
+2023-07-03, "Standing Order", "30-90-89", "12345678", "Rent", 500.00, , 3400.00
+2023-07-04, "Debit Card", "30-90-89", "12345678", "Groceries", 100.00, , 3300.00
+2023-07-05, "BACS", "30-90-89", "12345678", "Utilities Bill", 200.00, , 3100.00
+2023-07-06, "Debit Card", "30-90-89", "12345678", "Eating Out", 60.00, , 3040.00
+2023-07-07, "Standing Order", "30-90-89", "12345678", "Gym Membership", 30.00, , 3010.00
